@@ -62,8 +62,8 @@ class OECD_Classification:
         """
         
         """Load data"""
-        df_growth = pd.read_csv("assignment_4_OECD_data_growth.csv")  
-        df_explaining_vars = pd.read_csv("assignment_4_OECD_data_explaining_vars.csv")  
+        df_growth = pd.read_csv("growth_data.csv")  
+        df_explaining_vars = pd.read_csv("growth_data_variables.csv")  
         
         """Merge data"""
         self.df = pd.merge(df_explaining_vars, df_growth, on="REG_ID", how="inner")  
